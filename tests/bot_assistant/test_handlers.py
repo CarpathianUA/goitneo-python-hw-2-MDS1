@@ -9,7 +9,7 @@ def test_add_contact():
     result = contact_handlers.add_contact(("John", "2222222222"), contacts)
     assert result == "Contact John already exists."
 
-    print("test: add contact: passed!")
+    print("test: add contact: passed! [Module: {}]".format(contact_handlers.__name__))
 
 
 def test_change_contact():
@@ -20,7 +20,7 @@ def test_change_contact():
     result = contact_handlers.change_contact(("Alice", "2222222222"), contacts)
     assert result == "Contact Alice doesn't exist."
 
-    print("test: change contact: passed!")
+    print("test: change contact: passed! [Module: {}]".format(contact_handlers.__name__))
 
 
 def test_get_contact_phone():
@@ -31,7 +31,7 @@ def test_get_contact_phone():
     result = contact_handlers.get_contact_phone(("Bob",), contacts)
     assert result == "Contact doesn't exist."
 
-    print("test: get contact phone: passed!")
+    print("test: get contact phone: passed! [Module: {}]".format(contact_handlers.__name__))
 
 
 def test_get_all_contacts():
@@ -44,4 +44,4 @@ def test_get_all_contacts():
     result = contact_handlers.get_all_contacts(empty_contacts)
     assert result == "You don't have any contacts."
 
-    print("test: get all contacts: passed!")
+    print("test: get all contacts: passed! [Module: {}]".format(contact_handlers.__name__))
