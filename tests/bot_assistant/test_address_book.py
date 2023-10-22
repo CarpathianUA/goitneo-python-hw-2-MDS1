@@ -59,4 +59,4 @@ def test_get_all_contacts():
     assert result == [('John', 'Contact name: John, phones: 1111111111; 2222222222'),
                       ('Jane', 'Contact name: Jane, phones: 3333333333')]
 
-    print("test: get all contacts: passed!")
+    print("test: get all contacts: passed! [Module: {}]".format(ab.__name__))
