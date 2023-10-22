@@ -3,10 +3,10 @@ import re
 
 def validate_e164(phone):
     """
-    Validate phone number in E.164 format.
+    Validate phone number in a basic E.164 format.
     :param phone:
     """
-    pattern = re.compile(r"^\+?[1-9](-?\d){2,14}$")
+    pattern = re.compile(r"^\+?\d{10}$")
     return bool(pattern.match(phone))
 
 
@@ -18,4 +18,4 @@ def is_valid_phone(phone):
     if validate_e164(phone):
         return phone
     else:
-        raise ValueError
+        raise ValueError("Phone number must contain 10 digits, with or without '+' sign")

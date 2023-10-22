@@ -1,6 +1,6 @@
 from modules.bot_assistant.constants.exit_commands import EXIT_COMMANDS
-from modules.bot_assistant.handlers.parsers import parse_input
-from modules.bot_assistant.handlers.handlers import add_contact, change_contact, get_contact_phone, get_all_contacts
+from modules.bot_assistant.handlers.input_parsers import parse_input
+import modules.bot_assistant.handlers.contact_handlers as contact_handlers
 
 
 def main():
@@ -17,13 +17,13 @@ def main():
         elif command == "hello":
             print("How can I help you?")
         elif command == "add":
-            print(add_contact(args, contacts))
+            print(contact_handlers.add_contact(args, contacts))
         elif command == "change":
-            print(change_contact(args, contacts))
+            print(contact_handlers.change_contact(args, contacts))
         elif command == "phone":
-            print(get_contact_phone(args, contacts))
+            print(contact_handlers.get_contact_phone(args, contacts))
         elif command == "all" and not args:
-            print(get_all_contacts(contacts))
+            print(contact_handlers.get_all_contacts(contacts))
         else:
             print("Invalid command.")
 
