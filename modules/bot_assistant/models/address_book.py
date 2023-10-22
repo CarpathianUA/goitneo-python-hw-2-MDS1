@@ -11,8 +11,9 @@ class Field:
 
 
 class Name(Field):
-    def __init__(self, value):
-        super().__init__(value)
+    # we don't need to override __init__ method here from super class
+    # since Name class doesn't have any additional attributes, just a 'value' from Field class
+    pass
 
 
 class Phone(Field):
