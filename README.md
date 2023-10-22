@@ -3,7 +3,7 @@
 ### Bot Assistant
 
 Python package to demonstrate simple bot assistant.
-* basic functionality without errors handling for now
+* basic functionality with common errors handling
 ---
 
 ## Installation
